@@ -1,0 +1,23 @@
+<h1>Saving Account List</h1>
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th>Post Date</th>
+    <th>Description</th>
+    <th>Type</th>
+    <th>Status</th>
+    <th>Amount</th>
+    <th>Available Balance</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let savingTransaction of transactionList">
+    <td>{{savingTransaction.date | date: 'MM/dd/yyyy'}}</td>
+    <td>{{savingTransaction.description}}</td>
+    <td>{{savingTransaction.type}}</td>
+    <td>{{savingTransaction.status}}</td>
+    <td>{{savingTransaction.amount}}</td>
+    <td>{{savingTransaction.availableBalance}}</td>
+  </tr>
+  </tbody>
+</table>
